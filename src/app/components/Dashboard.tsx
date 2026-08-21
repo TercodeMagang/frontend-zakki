@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
     Home, Layout, FileText, Edit3, Users, Bell, Gift, QrCode,
     Globe, CreditCard, TrendingUp, UserPlus, CheckCircle,
@@ -89,8 +89,8 @@ export default function Dashboard({ onBackToHome }: DashboardProps) {
                             key={item.label}
                             onClick={() => setActiveMenu(item.label)}
                             className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${activeMenu === item.label
-                                    ? 'bg-[#C4A265] text-white'
-                                    : 'text-white/70 hover:bg-white/5 hover:text-white'
+                                ? 'bg-[#C4A265] text-white'
+                                : 'text-white/70 hover:bg-white/5 hover:text-white'
                                 }`}
                         >
                             {item.icon}
@@ -207,8 +207,8 @@ export default function Dashboard({ onBackToHome }: DashboardProps) {
                                         </div>
                                         <span
                                             className={`text-xs font-semibold px-2.5 py-1 rounded-full ${rsvp.status === 'Hadir'
-                                                    ? 'bg-green-50 text-green-700'
-                                                    : 'bg-red-50 text-red-700'
+                                                ? 'bg-green-50 text-green-700'
+                                                : 'bg-red-50 text-red-700'
                                                 }`}
                                         >
                                             {rsvp.status}
@@ -239,8 +239,8 @@ export default function Dashboard({ onBackToHome }: DashboardProps) {
                                             <span className="text-sm font-semibold text-stone-900">{inv.theme}</span>
                                             <span
                                                 className={`text-xs font-semibold px-2 py-0.5 rounded ${inv.status === 'Published'
-                                                        ? 'bg-green-100 text-green-700'
-                                                        : 'bg-yellow-100 text-yellow-700'
+                                                    ? 'bg-green-100 text-green-700'
+                                                    : 'bg-yellow-100 text-yellow-700'
                                                     }`}
                                             >
                                                 {inv.status}

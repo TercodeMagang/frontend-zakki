@@ -6,7 +6,7 @@ import {
   Package, CreditCard, CheckCircle, Clock, Copy, Download,
   QrCode, Shield, Lock, User, LogOut, Settings,
   History, Plus, Trash2, Image as ImageIcon, Music, Save,
-  Calendar, MapPin, Music2, Gift as GiftIcon, MessageCircle
+  Calendar, Gift as GiftIcon, MessageCircle
 } from 'lucide-react';
 
 // --- DATA MOCKUP ---
