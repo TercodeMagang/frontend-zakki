@@ -1699,29 +1699,70 @@ export default function App() {
               <button onClick={() => scrollToSection('tema')} className="bg-white border-2 border-stone-200 hover:border-[#C4A265] text-stone-700 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center gap-2"><Play className="w-5 h-5 fill-current" /> Lihat Template</button>
             </div>
           </div>
-          <div className="relative hidden lg:block">
-            <div className="relative z-10 bg-white rounded-[3rem] p-4 shadow-2xl border-8 border-stone-900 w-[320px] mx-auto transform rotate-[-5deg]">
-              <div className="bg-[#FAF8F5] rounded-[2.5rem] overflow-hidden">
-                <div className="h-48 relative overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop" alt="Wedding Background" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#C4A265]/80 to-[#C4A265]/60 flex items-center justify-center"><span className="text-3xl font-serif font-bold text-white">Wedding</span></div>
-                </div>
-                <div className="p-6 text-center space-y-3 bg-white">
-                  <p className="text-xs uppercase tracking-widest text-stone-500">The Wedding Of</p>
-                  <h3 className="font-serif text-2xl font-bold text-stone-900">Anisa & Raka</h3>
-                  <p className="text-xs text-stone-500">Sabtu, 12 Januari 2025<br />Ballroom Hotel Mulia</p>
-                  <button className="w-full bg-[#C4A265] text-white py-2 rounded-lg text-sm font-bold mt-4 hover:bg-[#b08e55] transition-colors">Buka Undangan</button>
+
+          {/* ✅ MOCKUP HP BARU - MIRIP REFERENSI TEMANMU */}
+          <div className="relative hidden lg:flex items-center justify-center h-[600px]">
+
+            {/* Badge Floating Kiri Atas (RSVP) */}
+            <div className="absolute top-20 left-0 z-20 bg-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3">
+              <div className="bg-green-100 p-2 rounded-full text-green-600">
+                <Check className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="font-bold text-sm text-stone-900">RSVP Diterima</p>
+                <p className="text-xs text-stone-500">+48 tamu baru</p>
+              </div>
+            </div>
+
+            {/* Mockup HP Utama dengan Efek 3D/Perspektif */}
+            <div className="relative z-10 transform -rotate-6 hover:rotate-0 transition-transform duration-500 ease-out">
+              {/* Frame HP Eksternal */}
+              <div className="bg-stone-900 rounded-[3rem] p-3 shadow-2xl w-[300px] ring-1 ring-stone-800/50">
+                {/* Layar HP Internal */}
+                <div className="bg-white rounded-[2.5rem] overflow-hidden relative">
+
+                  {/* Header Gambar Undangan */}
+                  <div className="h-56 relative overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop"
+                      alt="Wedding Invitation"
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Overlay Gradient Elegan */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40 flex items-end pb-6 justify-center">
+                      <span className="text-4xl font-serif font-bold text-white drop-shadow-lg italic">Pernikahan</span>
+                    </div>
+                  </div>
+
+                  {/* Konten Undangan di Layar */}
+                  <div className="p-6 text-center space-y-4 bg-white">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-semibold">Pernikahan</p>
+                    <h3 className="font-serif text-2xl font-bold text-stone-900 leading-tight">Anisa & Raka</h3>
+
+                    <div className="space-y-1 my-4">
+                      <p className="text-xs text-stone-600 font-medium">Sabtu, 12 Januari 2025</p>
+                      <p className="text-[10px] text-stone-400">Ballroom Hotel Mulia, Jakarta</p>
+                    </div>
+
+                    <button className="w-full bg-[#C4A265] text-white py-3 rounded-xl text-sm font-bold shadow-lg shadow-[#C4A265]/30 hover:bg-[#b08e55] transition-colors">
+                      Buka Undangan
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="absolute top-20 -left-10 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-pulse">
-              <div className="bg-green-100 p-2 rounded-full text-green-600"><Check className="w-5 h-5" /></div>
-              <div><p className="font-bold text-sm">RSVP Diterima</p><p className="text-xs text-stone-500">+48 tamu baru</p></div>
+
+            {/* Badge Floating Kanan Bawah (Amplop Digital) */}
+            <div className="absolute bottom-20 right-0 z-20 bg-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3">
+              <div className="bg-[#C4A265]/10 p-2 rounded-full text-[#C4A265]">
+                <Gift className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="font-bold text-sm text-stone-900">Amplop Digital</p>
+                <p className="text-xs text-stone-500">Rp 12.450.000</p>
+              </div>
             </div>
-            <div className="absolute bottom-20 -right-5 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-3">
-              <div className="bg-[#C4A265]/10 p-2 rounded-full text-[#C4A265]"><Gift className="w-5 h-5" /></div>
-              <div><p className="font-bold text-sm">Amplop Digital</p><p className="text-xs text-stone-500">Rp 12.450.000</p></div>
-            </div>
+
           </div>
         </div>
       </section>
