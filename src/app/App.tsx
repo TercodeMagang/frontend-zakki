@@ -1700,51 +1700,48 @@ export default function App() {
             </div>
           </div>
 
-          {/* ✅ MOCKUP HP BARU - MIRIP REFERENSI TEMANMU */}
-          <div className="relative hidden lg:flex items-center justify-center h-[600px]">
+          {/* ✅ MOCKUP HP RESPONSIF (MUNCUL DI HP & LAPTOP) */}
+          <div className="relative flex lg:block items-center justify-center h-[500px] lg:h-[600px] mt-12 lg:mt-0">
 
-            {/* Badge Floating Kiri Atas (RSVP) */}
-            <div className="absolute top-20 left-0 z-20 bg-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3">
-              <div className="bg-green-100 p-2 rounded-full text-green-600">
-                <Check className="w-5 h-5" />
+            {/* Badge Floating RSVP (Posisi Tengah Atas di HP) */}
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 lg:top-20 lg:left-0 lg:translate-x-0 z-20 bg-white px-4 py-2 lg:px-5 lg:py-3 rounded-xl lg:rounded-2xl shadow-lg flex items-center gap-2 lg:gap-3 scale-90 lg:scale-100">
+              <div className="bg-green-100 p-1.5 lg:p-2 rounded-full text-green-600">
+                <Check className="w-4 h-4 lg:w-5 lg:h-5" />
               </div>
               <div>
-                <p className="font-bold text-sm text-stone-900">RSVP Diterima</p>
-                <p className="text-xs text-stone-500">+48 tamu baru</p>
+                <p className="font-bold text-xs lg:text-sm text-stone-900">RSVP Diterima</p>
+                <p className="text-[10px] lg:text-xs text-stone-500">+48 tamu baru</p>
               </div>
             </div>
 
-            {/* Mockup HP Utama dengan Efek 3D/Perspektif */}
-            <div className="relative z-10 transform -rotate-6 hover:rotate-0 transition-transform duration-500 ease-out">
-              {/* Frame HP Eksternal */}
-              <div className="bg-stone-900 rounded-[3rem] p-3 shadow-2xl w-[300px] ring-1 ring-stone-800/50">
-                {/* Layar HP Internal */}
-                <div className="bg-white rounded-[2.5rem] overflow-hidden relative">
+            {/* Mockup HP Utama (Lurus di HP, Miring di Laptop) */}
+            <div className="relative z-10 transform lg:-rotate-6 hover:rotate-0 transition-transform duration-500 ease-out scale-90 lg:scale-100">
+              <div className="bg-stone-900 rounded-[2.5rem] lg:rounded-[3rem] p-2 lg:p-3 shadow-2xl w-[260px] lg:w-[300px] ring-1 ring-stone-800/50">
+                <div className="bg-white rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden relative">
 
                   {/* Header Gambar Undangan */}
-                  <div className="h-56 relative overflow-hidden">
+                  <div className="h-48 lg:h-56 relative overflow-hidden">
                     <img
                       src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop"
                       alt="Wedding Invitation"
                       className="w-full h-full object-cover"
                     />
-                    {/* Overlay Gradient Elegan */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40 flex items-end pb-6 justify-center">
-                      <span className="text-4xl font-serif font-bold text-white drop-shadow-lg italic">Pernikahan</span>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40 flex items-end pb-4 lg:pb-6 justify-center">
+                      <span className="text-3xl lg:text-4xl font-serif font-bold text-white drop-shadow-lg italic">Pernikahan</span>
                     </div>
                   </div>
 
-                  {/* Konten Undangan di Layar */}
-                  <div className="p-6 text-center space-y-4 bg-white">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-semibold">Pernikahan</p>
-                    <h3 className="font-serif text-2xl font-bold text-stone-900 leading-tight">Anisa & Raka</h3>
+                  {/* Konten Layar HP */}
+                  <div className="p-4 lg:p-6 text-center space-y-3 lg:space-y-4 bg-white">
+                    <p className="text-[8px] lg:text-[10px] uppercase tracking-[0.2em] text-stone-500 font-semibold">Pernikahan</p>
+                    <h3 className="font-serif text-xl lg:text-2xl font-bold text-stone-900 leading-tight">Anisa & Raka</h3>
 
-                    <div className="space-y-1 my-4">
-                      <p className="text-xs text-stone-600 font-medium">Sabtu, 12 Januari 2025</p>
-                      <p className="text-[10px] text-stone-400">Ballroom Hotel Mulia, Jakarta</p>
+                    <div className="space-y-1 my-2 lg:my-4">
+                      <p className="text-[10px] lg:text-xs text-stone-600 font-medium">Sabtu, 12 Januari 2025</p>
+                      <p className="text-[8px] lg:text-[10px] text-stone-400">Ballroom Hotel Mulia, Jakarta</p>
                     </div>
 
-                    <button className="w-full bg-[#C4A265] text-white py-3 rounded-xl text-sm font-bold shadow-lg shadow-[#C4A265]/30 hover:bg-[#b08e55] transition-colors">
+                    <button className="w-full bg-[#C4A265] text-white py-2 lg:py-3 rounded-lg lg:rounded-xl text-xs lg:text-sm font-bold shadow-md lg:shadow-lg shadow-[#C4A265]/30 hover:bg-[#b08e55] transition-colors">
                       Buka Undangan
                     </button>
                   </div>
@@ -1752,14 +1749,14 @@ export default function App() {
               </div>
             </div>
 
-            {/* Badge Floating Kanan Bawah (Amplop Digital) */}
-            <div className="absolute bottom-20 right-0 z-20 bg-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3">
-              <div className="bg-[#C4A265]/10 p-2 rounded-full text-[#C4A265]">
-                <Gift className="w-5 h-5" />
+            {/* Badge Floating Amplop (Posisi Tengah Bawah di HP) */}
+            <div className="absolute bottom-4 right-1/2 translate-x-1/2 lg:bottom-20 lg:right-0 lg:translate-x-0 z-20 bg-white px-4 py-2 lg:px-5 lg:py-3 rounded-xl lg:rounded-2xl shadow-lg flex items-center gap-2 lg:gap-3 scale-90 lg:scale-100">
+              <div className="bg-[#C4A265]/10 p-1.5 lg:p-2 rounded-full text-[#C4A265]">
+                <Gift className="w-4 h-4 lg:w-5 lg:h-5" />
               </div>
               <div>
-                <p className="font-bold text-sm text-stone-900">Amplop Digital</p>
-                <p className="text-xs text-stone-500">Rp 12.450.000</p>
+                <p className="font-bold text-xs lg:text-sm text-stone-900">Amplop Digital</p>
+                <p className="text-[10px] lg:text-xs text-stone-500">Rp 12.450.000</p>
               </div>
             </div>
 
